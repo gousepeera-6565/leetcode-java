@@ -13,7 +13,16 @@ public class ArrayOperations {
         return max;
     }
 
-
+ // Find minimum element
+    static int min(int[] ar) {
+        int min = ar[0];
+        for (int i = 1; i < ar.length; i++) {
+            if (ar[i] < min) {
+                min = ar[i];
+            }
+        }
+        return min;
+    }
 
 public static void main(String[] args) {
 
@@ -31,3 +40,4 @@ public static void main(String[] args) {
         int k = scan.nextInt();
 
         System.out.println("Maximum element: " + max(ar));
+        System.out.println("Minimum element: " + min(ar));
