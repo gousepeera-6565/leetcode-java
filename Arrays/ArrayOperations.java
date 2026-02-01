@@ -24,6 +24,17 @@ public class ArrayOperations {
         return min;
     }
 
+    // Count occurrences of a given element
+    static int count(int[] ar, int key) {
+        int c = 0;
+        for (int i = 0; i < ar.length; i++) {
+            if (ar[i] == key) {
+                c++;
+            }
+        }
+        return c;
+    }
+
 public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -41,3 +52,8 @@ public static void main(String[] args) {
 
         System.out.println("Maximum element: " + max(ar));
         System.out.println("Minimum element: " + min(ar));
+         System.out.println("Occurrences of " + k + ": " + count(ar, k));
+
+        scan.close();
+    }
+}
