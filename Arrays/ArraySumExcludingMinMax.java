@@ -12,6 +12,17 @@ public class ArraySumExcludingMinMax {
         return max;
     }
 
+       static int min(int[] ar) {
+        int min = ar[0];
+        for (int i = 1; i < ar.length; i++) {
+            if (ar[i] < min) {
+                min = ar[i];
+            }
+        }
+        return min;
+    }
+
+    
 
 
   public static void main(String[] args) {
@@ -25,7 +36,12 @@ public class ArraySumExcludingMinMax {
         }
 
           int maxValue = max(ar);
+           int minValue = min(ar);
 
+
+      
+        // Sum excluding maximum element
+        System.out.println("Sum excluding maximum: " + (totalSum - maxValue));
 
   }
 }
