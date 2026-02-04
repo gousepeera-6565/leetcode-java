@@ -22,7 +22,29 @@ public class Day13 {
         System.out.println();
     }
 
-  
+  // Merges two sorted arrays into one sorted array
+    public static int[] mergeSortedArrays(int[] ar1, int[] ar2) {
+        int[] res = new int[ar1.length + ar2.length];
+        int i = 0, j = 0, k = 0;
+
+        while (i < ar1.length && j < ar2.length) {
+            if (ar1[i] <= ar2[j]) {
+                res[k++] = ar1[i++];
+            } else {
+                res[k++] = ar2[j++];
+            }
+        }
+
+        while (i < ar1.length) {
+            res[k++] = ar1[i++];
+        }
+
+        while (j < ar2.length) {
+            res[k++] = ar2[j++];
+        }
+
+        return res;
+    }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -42,7 +64,11 @@ public class Day13 {
         Arrays.sort(ar2);
 
         printCommonElements(ar1, ar2);
-
+        int[] result = mergeSortedArrays(ar1, ar2);
+        System.out.println("Merged sorted array:");
+        for (int val : result) {
+            System.out.print(val + " ");
+        }
  
     }
 }
