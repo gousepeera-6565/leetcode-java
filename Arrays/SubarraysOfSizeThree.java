@@ -13,7 +13,17 @@ public class Day15 {
         }
     }
 
-    
+      // Print sum of all subarrays of size 3
+    public static void sumOfSubarrays(int[] arr) {
+        for (int i = 0; i <= arr.length - 3; i++) {
+            int sum = 0;
+            for (int j = i; j < i + 3; j++) {
+                sum += arr[j];
+            }
+            System.out.println(sum);
+        }
+    }
+
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -27,7 +37,7 @@ public class Day15 {
 
         // Call required methods
         printSubarrays(arr);
-         
+        // sumOfSubarrays(arr);
 
         scan.close();
     }
