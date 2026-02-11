@@ -35,7 +35,40 @@ public class Day18_LongestConsecutiveSubarray {
         System.out.println("Length: " + count);
     }
 
-  
+ // Method to find and print the longest consecutive subarray
+    public static void printLongestSubarray(int[] arr) {
+        int count = 1;
+        int maxLength = 1;
+        int endIndex = 0;
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i + 1] - arr[i] == 1) {
+                count++;
+            } else {
+                if (count > maxLength) {
+                    maxLength = count;
+                    endIndex = i;
+                }
+                count = 1;
+            }
+        }
+
+        // Check last sequence
+        if (count > maxLength) {
+            maxLength = count;
+            endIndex = arr.length - 1;
+        }
+
+        int startIndex = endIndex - maxLength + 1;
+
+        System.out.print("Longest Consecutive Subarray: ");
+        for (int i = startIndex; i <= endIndex; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+
+
+ 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
@@ -47,6 +80,7 @@ public class Day18_LongestConsecutiveSubarray {
         }
 
         printSubarrayLengths(arr);   
+      printLongestSubarray(arr);
      
  
     }
