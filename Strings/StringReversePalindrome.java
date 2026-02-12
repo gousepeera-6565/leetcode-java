@@ -68,8 +68,5 @@ public class Day19_StringReversePalindrome {
         } else {
             System.out.println("Not Palindrome");
         }
-
-
-         
     }
 }
