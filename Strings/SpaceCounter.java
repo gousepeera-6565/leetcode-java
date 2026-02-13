@@ -28,7 +28,22 @@ public class SpaceCounter {
         return count;
     }
 
-     
+      // Method to count words (based on space separation)
+    public static int countWords(String s) {
+        if (s.trim().isEmpty()) {
+            return 0;
+        }
+
+        int count = 1; // At least one word
+
+        for (int i = 0; i < s.length() - 1; i++) {
+            if (s.charAt(i) == ' ' && s.charAt(i + 1) != ' ') {
+                count++;
+            }
+        }
+
+        return count;
+    }
 
     public static void main(String[] args) {
 
@@ -41,6 +56,8 @@ public class SpaceCounter {
         int wordCount = countWords(input);
 
         System.out.println("Total Spaces: " + spaceCount);
-        
+         System.out.println("Total Words: " + wordCount);
+
+        ;
     }
 }
