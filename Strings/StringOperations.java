@@ -17,7 +17,28 @@ public class StringOperations {
         return result;
     }
 
- 
+ // Method to remove leading and trailing spaces
+    public static String removeExtraSpaces(String s) {
+        int start = 0, end = s.length() - 1;
+
+        // Find first non-space character
+        while (start < s.length() && s.charAt(start) == ' ') {
+            start++;
+        }
+
+        // Find last non-space character
+        while (end >= 0 && s.charAt(end) == ' ') {
+            end--;
+        }
+
+        String result = "";
+        for (int i = start; i <= end; i++) {
+            result = result + s.charAt(i);
+        }
+
+        return result;
+    }
+
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -26,7 +47,10 @@ public class StringOperations {
         // Convert to lowercase
         String lower = toLowerCase(input);
         System.out.println("Lowercase: " + lower);
-
+         
+        // Remove leading and trailing spaces
+        String trimmed = removeExtraSpaces(input);
+        System.out.println("After removing spaces: " + trimmed);
         
     }
 }
