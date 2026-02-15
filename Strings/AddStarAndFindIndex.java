@@ -15,7 +15,16 @@ public class AddStarAndFindIndex {
         }
         return result;
     }
- 
+
+    // Return index of a given character
+    public static int findIndex(String s, char ch) {
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ch) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -27,6 +36,13 @@ public class AddStarAndFindIndex {
         String modified = addStarBeforeA(input);
         System.out.println("Modified String: " + modified);
 
+        
+        // Operation 2: Find index of a character
+        System.out.println("Enter character to find index:");
+        char ch = scan.next().charAt(0);
+
+        int index = findIndex(input, ch);
+        System.out.println("Index: " + index);
          
     }
 }
