@@ -31,6 +31,16 @@ public class SubstringOperations {
 
         return (j == s2.length()) ? "Yes" : "No";
     }
+     // Print all substrings of given size
+    public static void printSubstrings(String s, int size) {
+        for (int i = 0; i <= s.length() - size; i++) {
+            String temp = "";
+            for (int j = i; j < i + size; j++) {
+                temp = temp + s.charAt(j);
+            }
+            System.out.println(temp);
+        }
+    }
 
     
     public static void main(String[] args) {
@@ -40,7 +50,8 @@ public class SubstringOperations {
         String s2 = scan.next();
         int size = scan.nextInt();
 
-      
+        // Example operations
+        printSubstrings(s, size);
 
         // System.out.println(checkSubsequence(s, s2));
          
