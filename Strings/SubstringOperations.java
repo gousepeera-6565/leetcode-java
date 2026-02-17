@@ -42,6 +42,22 @@ public class SubstringOperations {
         }
     }
 
+        // Check if s2 exists as substring in s
+    public static String findSubstring(String s, String s2) {
+        int size = s2.length();
+
+        for (int i = 0; i <= s.length() - size; i++) {
+            String temp = "";
+            for (int j = i; j < i + size; j++) {
+                temp = temp + s.charAt(j);
+            }
+            if (temp.equals(s2)) {
+                return "Yes";
+            }
+        }
+        return "No";
+    }
+
     
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -54,7 +70,7 @@ public class SubstringOperations {
         printSubstrings(s, size);
 
         // System.out.println(checkSubsequence(s, s2));
-         
+          // System.out.println(findSubstring(s, s2));  
 
         scan.close();
     }
