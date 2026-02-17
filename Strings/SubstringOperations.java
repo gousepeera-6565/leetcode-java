@@ -58,6 +58,22 @@ public class SubstringOperations {
         return "No";
     }
 
+    // Count occurrences of substring
+    public static int countSubstring(String s, String s2) {
+        int size = s2.length();
+        int count = 0;
+
+        for (int i = 0; i <= s.length() - size; i++) {
+            String temp = "";
+            for (int j = i; j < i + size; j++) {
+                temp = temp + s.charAt(j);
+            }
+            if (temp.equals(s2)) {
+                count++;
+            }
+        }
+        return count;
+    }
     
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -71,6 +87,7 @@ public class SubstringOperations {
 
         // System.out.println(checkSubsequence(s, s2));
           // System.out.println(findSubstring(s, s2));  
+           // System.out.println(countSubstring(s, s2));
 
         scan.close();
     }
