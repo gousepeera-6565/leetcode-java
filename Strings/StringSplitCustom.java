@@ -30,7 +30,24 @@ public class StringSplitCustom {
 
         return arr;
     }
+  // Method to count number of words
+    public static int countWords(String s) {
+        int count = 0;
+        boolean isWord = false;
 
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) != ' ') {
+                if (!isWord) {
+                    count++;
+                    isWord = true;
+                }
+            } else {
+                isWord = false;
+            }
+        }
+
+        return count;
+    }
   
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
