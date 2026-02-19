@@ -20,6 +20,21 @@ public class _RemoveDuplicatesUsingSet {
     }
 
      
+    // Method to remove duplicate elements from an array
+    public static void removeArrayDuplicates(int[] arr) {
+        TreeSet<Integer> set = new TreeSet<>();
+
+        for (int num : arr) {
+            set.add(num);
+        }
+
+        System.out.print("Array after removing duplicates (sorted): ");
+        for (int x : set) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -38,6 +53,7 @@ public class _RemoveDuplicatesUsingSet {
         for (int i = 0; i < size; i++) {
             arr[i] = scan.nextInt();
         }
+ removeArrayDuplicates(arr);
 
         
     }
