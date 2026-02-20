@@ -73,7 +73,15 @@ public class HashMap  {
             int value = map.get(key);
             System.out.println(key + " : " + value);
         }
+   // Iteration using entrySet()
+        System.out.println("\nUsing entrySet():");
+        Set<Entry<String, Integer>> entries = map.entrySet();
+        for (Entry<String, Integer> entry : entries) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
 
+        // Call character counting method
+        countChar(s);
         
     }
 }
