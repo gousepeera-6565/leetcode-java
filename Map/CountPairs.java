@@ -9,7 +9,7 @@ import java.util.Scanner;
  * Concept: Count number of pairs in an array using HashMap
  * A pair is formed when two same elements are available.
  */
-public class Day30 {
+public class  CountPairs {
 
     // Method to count number of pairs
     public static int countPairs(int arr[]) {
