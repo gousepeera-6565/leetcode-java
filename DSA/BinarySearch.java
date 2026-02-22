@@ -31,7 +31,27 @@ public class BinarySearch {
         return -1; // Element not found
     }
 
-  
+   // Binary Search within a specific range (0 to range index)
+    public static int binarySearchRange(int[] arr, int key, int range) {
+        int low = 0;
+        int high = range;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+
+            if (key == arr[mid]) {
+                return mid;
+            } 
+            else if (key < arr[mid]) {
+                high = mid - 1;
+            } 
+            else {
+                low = mid + 1;
+            }
+        }
+        return -1;
+    }
+
 
     public static void main(String[] args) {
 
