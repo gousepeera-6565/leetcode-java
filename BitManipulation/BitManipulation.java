@@ -28,7 +28,21 @@ public class BitManipulation {
         return binary;
     }
 
-    
+       // Method to convert Binary to Decimal
+    static int binaryToDecimal(String binary) {
+        int decimal = 0;
+        int power = 1;
+
+        // Traverse from right to left
+        for (int i = binary.length() - 1; i >= 0; i--) {
+            if (binary.charAt(i) == '1') {
+                decimal = decimal + power;
+            }
+            power = power * 2;
+        }
+
+        return decimal;
+    }
 
     public static void main(String[] args) {
 
@@ -41,7 +55,10 @@ public class BitManipulation {
         String binary = decimalToBinary(n);
         System.out.println("Binary: " + binary);
 
-        
-        scan.close();
+       // Binary to Decimal
+        int decimal = binaryToDecimal(binary);
+        System.out.println("Decimal: " + decimal);
+
+  
     }
 }
