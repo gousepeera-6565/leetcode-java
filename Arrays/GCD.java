@@ -12,7 +12,19 @@ import java.util.Scanner;
 public class GCD {
 
    
+      // Euclid Algorithm (Efficient Method)
+    public static int euclid(int a, int b) {
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+        return a;
+    }
 
+  
     // Brute Force GCD Method
     public static int gcd(int a, int b) {
         int min;
@@ -53,7 +65,9 @@ public class GCD {
         System.out.print("Enter second number: ");
         int b = scan.nextInt();
 
-        
+        // GCD using Euclid Method
+        System.out.println("GCD (Euclid): " + euclid(a, b));
+
 
         // GCD using brute force
         System.out.println("GCD (Brute Force): " + gcd(a, b));
