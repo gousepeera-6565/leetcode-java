@@ -26,7 +26,12 @@ public class RecursionExamples {
         printDesc(n - 1);
     }
 
-   
+   // 2. Factorial
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) return 1;
+        return n * factorial(n - 1);
+    }
+
 
     public static void main(String[] args) {
 
@@ -35,6 +40,7 @@ public class RecursionExamples {
         int[] arr = {1, 2, 3, 4, 5};
 
        printDesc(9);
+      factorial(7);
 
         
     }
