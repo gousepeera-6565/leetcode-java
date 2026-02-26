@@ -33,6 +33,13 @@ public class RecursionExamples {
     }
 
 
+  
+    // 4. Print natural numbers from 1 to n
+    public static void printNatural(int n) {
+        if (n == 0) return;
+        printNatural(n - 1);
+        System.out.println(n);
+    }
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
