@@ -40,6 +40,14 @@ public class RecursionExamples {
         printNatural(n - 1);
         System.out.println(n);
     }
+
+   // 5. Count digits
+    public static int countDigits(int n) {
+        if (n == 0) return 0;
+        return countDigits(n / 10) + 1;
+    }
+
+  
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
