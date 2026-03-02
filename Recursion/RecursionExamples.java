@@ -47,6 +47,12 @@ public class RecursionExamples {
         return countDigits(n / 10) + 1;
     }
 
+
+  // 6. Sum of digits
+    public static int sumDigits(int n) {
+        if (n == 0) return 0;
+        return sumDigits(n / 10) + (n % 10);
+    }
   
     public static void main(String[] args) {
 
