@@ -68,6 +68,13 @@ public class RecursionExamples {
         return isPalindrome(s, i + 1, j - 1);
     }
 
+  // 9. Sum of array
+    public static int sumArray(int[] arr, int i) {
+        if (i == arr.length) return 0;
+        return arr[i] + sumArray(arr, i + 1);
+    }
+
+  
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
