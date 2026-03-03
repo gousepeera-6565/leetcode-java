@@ -60,7 +60,14 @@ public class RecursionExamples {
         if (i < 0) return "";
         return s.charAt(i) + reverseString(s, i - 1);
     }
-  
+
+  // 8. Palindrome check
+    public static boolean isPalindrome(String s, int i, int j) {
+        if (i >= j) return true;
+        if (s.charAt(i) != s.charAt(j)) return false;
+        return isPalindrome(s, i + 1, j - 1);
+    }
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
