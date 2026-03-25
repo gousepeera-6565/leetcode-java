@@ -80,7 +80,14 @@ public class RecursionExamples {
         return (josephus(n - 1, k) + k) % n;
     }
 
-  
+    // 11. Subset sum count
+    public static int subsetSum(int[] arr, int sum, int i) {
+        if (sum == 0) return 1;
+        if (sum < 0 || i == arr.length) return 0;
+
+        return subsetSum(arr, sum - arr[i], i + 1)
+                + subsetSum(arr, sum, i + 1);
+    }
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
