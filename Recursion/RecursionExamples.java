@@ -96,7 +96,8 @@ public class RecursionExamples {
 
        printDesc(9);
       factorial(7);
-
+       tring str = "madam";
+        System.out.println("Is Palindrome: " + isPalindrome(str, 0, str.length() - 1));
         
     }
 }
