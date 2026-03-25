@@ -16,7 +16,7 @@ import java.util.Scanner;
  * 9. Sum of array
  * 10. Josephus problem
  * 11. Subset sum count
- */
+ **/
 public class RecursionExamples {
 
     // 1. Print numbers from n to 1
